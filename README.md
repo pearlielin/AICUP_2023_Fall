@@ -1,5 +1,20 @@
 # AICUP_2023_Fall
 隱私保護與醫學數據標準化競賽： 解碼臨床病例、讓數據說故事競賽 競賽報告
+## Environment Setup
+### package installation
+```
+pip uninstall -y tensorflow --quiet
+pip install ludwig
+pip install ludwig[llm]
+pip install accelerate
+pip install -i https://test.pypi.org/simple/ bitsandbytes
+pip install tqdm
+pip install pandas
+```
+### HuggingFace Token Setup for Llama2 model
+```
+os.environ["HUGGING_FACE_HUB_TOKEN"] = {Your Token}
+```
 ## 資料夾結構
 ```
 .
