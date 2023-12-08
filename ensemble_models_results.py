@@ -11,12 +11,12 @@ if __name__ == '__main__':
     model_a_answer = model_a_answer[model_a_answer['phi_type'].isin(
         model_A_type)]
 
-    model_b_answer = pd.read_csv(
-        'answer_final_test.txt', sep="\t", names=col_names)
-    model_B_type = ['STATE', 'DATE', 'DEPARTMENT', 'TIME',
-                    'ORGANIZATION', 'COUNTRY', 'LOCATION-OTHER', 'DURATION']
-    model_b_answer = model_b_answer[model_b_answer['phi_type'].isin(
-        model_B_type)]
+    llama2_answer = pd.read_csv(
+        'llama2_answer.txt', sep="\t", names=col_names)
+    llama2_type = ['STATE', 'DATE', 'DEPARTMENT', 'TIME',
+                   'ORGANIZATION', 'COUNTRY', 'LOCATION-OTHER', 'DURATION']
+    llama2_answer = llama2_answer[llama2_answer['phi_type'].isin(
+        llama2_type)]
 
-    results = pd.concat([model_a_answer, model_b_answer])
+    results = pd.concat([model_a_answer, llama2_answer])
     results.to_csv('answer.txt', sep='\t', index=False, header=False)
