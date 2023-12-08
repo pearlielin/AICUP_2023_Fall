@@ -42,30 +42,36 @@
 ```
 
 ## Llama2-7B
-### data preprocess
+### Training Phase
+#### preprocess training set
 ```
 python llama2_src/data_preprocess.py
 ```
-### data augmentation
+#### data augmentation
 ```
 python llama2_src/data_augment.py
 ```
-### concat training data and augmented data
+#### concat training data and augmented data
 ```
 python llama2_src/concat_trainset.py
 ```
-### training
+#### training
 ```
 python llama2_src/train.py
 ```
-### inference
+
+### Testing Phase
+#### preprocess testing set
+```
+python llama2_src/data_preprocess.py -t
+```
+#### inference
 ```
 python llama2_src/inference.py
 ```
-### data postprocess
+### data postprocess to generate llama2_answer.txt
 ```
 python llama2_src/data_postprocess.py
 ```
-
 
 ## Roberta
