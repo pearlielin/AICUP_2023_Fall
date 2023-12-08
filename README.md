@@ -98,12 +98,11 @@ python llama2_src/find_re.py
 ```
 
 ## Roberta
-open the script `aicup_submit.ipynb` on colab
-every setting just rewrite the first block
+open the script `aicup_submit.ipynb` on colab. Every setting just rewrite the first block
 
 
 ### Checkpoint load
-rewrite the stage_1_model_path to the model checkpoint path, default download the model (model_36.39.pt) we train save in google drive
+Rewrite the stage_1_model_path to the model checkpoint path. Default download the model (model_36.39.pt) we train save in google drive
 ```
 stage_1_model_path = 'model_36.39.pt'
 ```
@@ -127,5 +126,18 @@ stage_1_training = False
 ```
 
 ### Download the result
-The script will automate download the predict result of test data. The result filename is roberta_answer.txt
+The script will automate download the predict result of test data. The result filename is `roberta_answer.txt`. You need to put the result file to the root directory of this repo to merge the result with llama2 output. 
+
+## Merge result
+After use llama2 and Roberta to inference the test data. Use the `ensemble_models_results.py` to merge the two result.
+
+### Check 
+Check if the `llama2_answer.txt` and `roberta_answer.txt` both under the root directory of this repo. 
+
+### Merge
+Merge the result by execute the following command. And the merge result `answer.txt` will save in the root directory.
+```
+python ensemble_models_results.py
+```
+
 
