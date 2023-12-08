@@ -92,7 +92,7 @@ python llama2_src/inference.py
 ```
 python llama2_src/data_postprocess.py
 ```
-### find rule-based PHI type
+### find rule-based PHI type and append to llama2_answer.txt
 ```
 python llama2_src/find_re.py
 ```
