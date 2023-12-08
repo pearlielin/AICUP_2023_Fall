@@ -116,19 +116,19 @@ Rewrite the stage_1_model_path to the model checkpoint path. Default download th
 stage_1_model_path = 'model_36.39.pt'
 ```
 ### Training Phase
-If train the model from scratch 
-set stage_1_model_path to None
-and set stage_1_training to True
+If train the model from scratch \
+set stage_1_model_path to None\
+and set stage_1_training to True\
 ```
 stage_1_model_path = None
 stage_1_training = True
 ```
 
 ### Testing Phase
-If only test the model performance on test data 
-set stage_1_model_path to model be test
-and set stage_1_training to False
-default download the model (model_36.39.pt) we train save in google drive
+If only test the model performance on test data \
+set stage_1_model_path to model be test\
+and set stage_1_training to False\
+default download the model (model_36.39.pt) we train save in google drive\
 ```
 stage_1_model_path = 'model_36.39.pt'
 stage_1_training = False
