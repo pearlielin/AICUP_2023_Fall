@@ -23,7 +23,6 @@
 │   │   ├── line_split
 │   │   │   ├── First_Phase_Text_Dataset_processed.tsv
 │   │   │   ├── Second_Phase_Text_Dataset_processed.tsv
-│   │   │   ├── total_train(1+2+aug).tsv
 │   │   │   ├── total_train.tsv
 │   │   │   └── Validation_Release_processed.tsv
 │   ├── Second_Phase_Dataset
