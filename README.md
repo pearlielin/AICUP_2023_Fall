@@ -51,7 +51,7 @@ python llama2_src/data_preprocess.py
 ```
 python llama2_src/data_augment.py
 ```
-#### concat training data and augmented data
+#### concatenate training data and augmented data
 ```
 python llama2_src/concat_trainset.py
 ```
