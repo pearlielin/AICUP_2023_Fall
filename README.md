@@ -64,44 +64,44 @@ os.environ["HUGGING_FACE_HUB_TOKEN"] = {Your Token}
 ## Llama2-7B
 ### Training Phase
 #### preprocess training set
-process the medical record and store the processed data to folder "dataset/processed/line_split"
+process the medical record and store the processed data to folder `dataset/processed/line_split`
 ```
 python llama2_src/data_preprocess.py
 ```
 #### data augmentation
-do the data augmentation on PHI type LOCATION-OTHER, SET, TIME and save the augmented data to "dataset/augment_data.tsv"
+do the data augmentation on PHI type LOCATION-OTHER, SET, TIME and save the augmented data to `dataset/augment_data.tsv`
 ```
 python llama2_src/data_augment.py
 ```
 #### concatenate training data and augmented data
-concatenate the data and save to "dataset/processed/line_split/total_train.tsv"
+concatenate the data and save to `dataset/processed/line_split/total_train.tsv`
 ```
 python llama2_src/concat_trainset.py
 ```
 #### training
-train the model and save the model to "results"
+train the model and save the model to `results`
 ```
 python llama2_src/train.py
 ```
 
 ### Testing Phase
 #### preprocess testing set
-process the testing set and save the processed data to "dataset/processed/line_split/opendid_test_processed.tsv"
+process the testing set and save the processed data to `dataset/processed/line_split/opendid_test_processed.tsv`
 ```
 python llama2_src/data_preprocess.py -t
 ```
 #### inference
-inference the testing set and save the result to "test_output.csv"
+inference the testing set and save the result to `test_output.csv`
 ```
 python llama2_src/inference.py
 ```
 ### data postprocess
-process the file test_output.csv to the answer format and save to "llama2_answer.txt"
+process the file `test_output.csv` to the answer format and save to `llama2_answer.txt`
 ```
 python llama2_src/data_postprocess.py
 ```
 ### find rule-based PHI type and append to llama2_answer.txt
-find COUNTRY, SET, DURATION of the testing set via rule-based method and append the output to "llama2_answer.txt"
+find COUNTRY, SET, DURATION of the testing set via rule-based method and append the output to `llama2_answer.txt`
 ```
 python llama2_src/find_re.py
 ```
