@@ -1,6 +1,6 @@
 # AICUP_2023_Fall
 隱私保護與醫學數據標準化競賽： 解碼臨床病例、讓數據說故事競賽 競賽報告
-## Environment Setup
+## Environment Setup (python3.10)
 ### package installation
 ```
 pip uninstall -y tensorflow --quiet

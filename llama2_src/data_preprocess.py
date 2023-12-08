@@ -43,6 +43,8 @@ def process_all_files(need_process_folder_list, need_process_answer_files):
                 filepath, file_id,  annos_dict))
 
         folder_name = folder[folder.find('/')+1:]
+        if not os.path.exists('dataset/processed/line_split'):
+            os.makedirs('dataset/processed/line_split')
         tsv_output_path = 'dataset/processed/line_split/' + folder_name + '_processed.tsv'
         with open(tsv_output_path, 'w', encoding='utf-8') as fw:
             for seq_pair in all_seq_pairs:
@@ -109,7 +111,6 @@ def process_medical_report(filepath, file_id, annos_dict):
                 bounary = new_line_idx
                 continue
             if article[bounary:new_line_idx].lower() in continue_word:
-                print(article[bounary:new_line_idx])
                 continue
             if temp_seq == "":
                 temp_seq = "PHI:Null\\n"
