@@ -57,7 +57,7 @@ python llama2_src/concat_trainset.py
 ### training
 ```
 python llama2_src/train.py
-```cdd
+```
 ### inference
 ```
 python llama2_src/inference.py
